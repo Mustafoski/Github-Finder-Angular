@@ -31,7 +31,7 @@ export class GithubService {
   getUser(): Observable<any> {
     return this.http
       .get<Github>(
-        'http://api.github.com/users/' +
+        'https://api.github.com/users/' +
           this.username +
           '?client_id=' +
           this.client_id +
