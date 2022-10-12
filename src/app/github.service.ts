@@ -38,7 +38,7 @@ export class GithubService {
           '&client_secret=' +
           this.client_secret
       )
-      .pipe(map((res) => res));
+      .pipe(map((res:any) => res));
   }
   getRepos(): Observable<any> {
     return this.http
@@ -50,7 +50,9 @@ export class GithubService {
           '&client_secret=' +
           this.client_secret
       )
-      .pipe(map((res) => res));
+      .pipe(map((res:any) => {
+        return res;
+      }));
   }
 
   updateUser(username: string) {
