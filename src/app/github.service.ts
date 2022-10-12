@@ -43,7 +43,7 @@ export class GithubService {
   getRepos(): Observable<any> {
     return this.http
       .get(
-        'http://api.github.com/users/' +
+        'https://api.github.com/users/' +
           this.username +
           '/repos?client_id=' +
           this.client_id +
